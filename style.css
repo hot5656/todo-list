@@ -1,0 +1,223 @@
+.debug *,
+.debug {
+	outline: 1px solid gold
+}
+
+body {
+	font-family: 'Times New Roman';
+	font-size: 22px;
+	color: #179099;
+}
+
+.wrap {
+	position: relative;
+	max-width: 800px;
+	/* height: 80vh; */
+	margin: 50px auto;
+	background: #FFFCE3;
+	padding: 50px;
+}
+
+.post-nail {
+	position: absolute;
+	top: 50px;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background: #6FC6CC;
+}
+
+.left-nail {
+	left: 50px;
+}
+
+.right-nail {
+	right: 50px;
+}
+
+.title {
+	font-size: 60px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.warning {
+	color: red;
+	font-size: 16px;
+	margin-top: -20px;
+	display: none;
+}
+
+.warning.active {
+	display: block;
+}
+
+.job-add input {
+	width: 100%;
+	background: none;
+	border: none;
+	font-size: 22px;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.job-add input::placeholder {
+	color: #CFEBE1;
+}
+
+.job-add input:focus {
+	outline: none;
+	color: #179099;
+	border-width: 0 0 2px 0;
+	border-bottom: 2px solid #179099;
+}
+
+.item {
+	position: relative;
+	line-height: 60px;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.item:hover {
+	background: #fff;
+}
+
+.job:hover {
+	cursor: pointer;
+}
+
+input:checked {
+	background: #179099;
+	color: red;
+}
+
+/* -- set checkbox -- */
+.job {
+	/* 設定外框 block, size, font-size ... */
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.job input {
+	/* input 設定長寬為 0,透明 */
+	position: absolute;
+	opacity: 0;
+	height: 0px;
+	width: 0px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	/* 設定新 checkbox mark */
+	position: absolute;
+	top: 20px;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	border: 2px solid #179099;
+}
+
+.done .checkmark {
+	border-color: #AAD9CE;
+}
+
+/* Show the checkmark when checked */
+.job input:checked~.checkmark:after {
+	/* 若 checked 顯示符號 */
+	display: block;
+}
+
+.done .job {
+	color: #AAD9CE;
+}
+
+/* Style the checkmark/indicator */
+.job .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+	/* 設定符號位置 */
+	left: 4px;
+	top: 0px;
+	/* 設定打勾符號 */
+	width: 6px;
+	height: 12px;
+	border: solid #AAD9CE;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+/* -- set checkbox -- */
+.notice {
+	position: absolute;
+	background: #179099;
+	color: #fff;
+	top: -20px;
+	left: -14px;
+	border-radius: 8px;
+	font-size: 14px;
+	line-height: 1.2;
+	padding: 6px 12px;
+	display: none;
+}
+.notice.active {
+	display: block;
+}
+.notice::after {
+	position: absolute;
+	top:26px;
+	left:20px;
+	content: '';
+	display: block;
+	height:6px;
+	width:6px;
+	border-style: solid;
+	border-color: transparent transparent #179099 transparent;
+	border-width: 6px;
+	transform: rotate(180deg);
+}
+
+.item .button {
+	width: 30px;
+}
+
+.item .button::before {
+	position: absolute;
+	display: block;
+	top: 18px;
+	right: 16px;
+	content: '';
+	width: 20px;
+	height: 20px;
+	border-right: 2px solid #179099;
+	transform: rotate(45deg);
+}
+
+.item.done .button::before {
+	border-color: #AAD9CE;
+}
+
+.item .button::after {
+	position: absolute;
+	display: block;
+	top: 18px;
+	right: 3px;
+	content: '';
+	width: 20px;
+	height: 20px;
+	border-left: 2px solid #179099;
+	transform: rotate(-45deg);
+}
+
+.item.done .button::after {
+	border-color: #AAD9CE;
+}
+
+.item .button:hover {
+	cursor: pointer;
+}
